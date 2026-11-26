@@ -1,0 +1,67 @@
+{
+  "name": "pathport",
+  "version": "0.1.0",
+  "description": "Local-first cross-platform filename compatibility checker for software repositories",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "pathport": "./bin/pathport.js"
+  },
+  "files": [
+    "bin/",
+    "dist/",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "keywords": [
+    "filename",
+    "cross-platform",
+    "portability",
+    "windows",
+    "macos",
+    "linux",
+    "case-collision",
+    "unicode",
+    "lint",
+    "cli",
+    "git"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chirag-agrawal/pathport.git"
+  },
+  "homepage": "https://github.com/chirag-agrawal/pathport#readme",
+  "bugs": {
+    "url": "https://github.com/chirag-agrawal/pathport/issues"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.test.json --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "tsc -p tsconfig.test.json && node --test \"dist-test/test/**/*.test.js\"",
+    "test:coverage": "tsc -p tsconfig.test.json && node --test --experimental-test-coverage --test-coverage-exclude=\"dist/**\" --test-coverage-exclude=\"dist-test/test/**\" \"dist-test/test/**/*.test.js\"",
+    "prepublishOnly": "npm run lint && npm run typecheck && npm run build && npm test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/node": "^22.13.5",
+    "eslint": "^9.21.0",
+    "prettier": "^3.5.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.25.0"
+  }
+}
