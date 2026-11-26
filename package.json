@@ -1,5 +1,5 @@
 {
-  "name": "pathport",
+  "name": "@codest0411/pathport",
   "version": "0.1.0",
   "description": "Local-first cross-platform filename compatibility checker for software repositories",
   "license": "MIT",
