@@ -40,11 +40,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chirag-agrawal/pathport.git"
+    "url": "https://github.com/codest0411/pathport.git"
   },
-  "homepage": "https://github.com/chirag-agrawal/pathport#readme",
+  "homepage": "https://github.com/codest0411/pathport#readme",
   "bugs": {
-    "url": "https://github.com/chirag-agrawal/pathport/issues"
+    "url": "https://github.com/codest0411/pathport/issues"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
